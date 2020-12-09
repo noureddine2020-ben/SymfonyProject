@@ -1,0 +1,27 @@
+{{ form_start(form) }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="row">
+    <div class="col-md-4" style="font-size: inherit">{{ form_row(form.title) }}  </div>
+    <div class="col-md-4">{{ form_row(form.description) }}  </div>
+    <div class="col-md-4">{{ form_row(form.price) }}  </div>
+</div>
+<div class="row">
+    <div class="col-md-4">{{ form_row(form.name) }}  </div>
+    <div class="col-md-4">{{ form_row(form.location) }}  </div>
+    <div class="col-md-4">{{ form_row(form.date_mise_circul) }}  </div>
+
+</div>
+<div class="row">
+    <div class="col-md-2">{{ form_row(form.imageFile) }}  </div>
+    <div class="col-md-3">{{ form_row(form.marque) }}  </div>
+
+    <div class="col-md-4">{{ form_row(form.puissance) }}  </div>
+    <div class="col-md-4">{{ form_row(form.tranmission) }}  </div>
+</div>
+<div class="row">
+    <div class="col-md-4">{{ form_row(form.compteur) }}  </div>
+    <div class="col-md-4">{{ form_row(form.solde) }}  </div>
+</div>
+{{ form_rest(form) }}
+<button class="btn btn-danger"> {{ button|default('Enregistrer') }}</button>
+{{ form_end(form) }}

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Agence Ben Mahmoud' %}
+{% block body %}
+    <div class="jumbotron text-center font-weight-bold ">
+        <div class="container">
+            <h1 class="">Agence BEN MAHMOUD</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2><i class='fa fa-cart-arrow-down'></i> Les derniers matériels ajoutés</h2>
+        <div class="row flex">
+
+       {% for property in properties %}
+           <div class="col-3">
+               <div class="card">
+                    <div class="body">
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <div class="card md-4">
+                                    {% if property.filename %}
+                                        <img src="/images/properties/{{ property.filename }}" alt="card-img-top" style="width: 100%;height: auto;">
+                                    {% endif %}
+                                <a href="{{ path('property.show',{id:property.id}) }}"> {{ property.title }} </a>
+                            </h5>
+                            <p class="card-text">{{ property.location }}</p>
+                            <div class="text-primary" style="font-weight: bold;font-size:medium"> {{ property.formattedPrice() }} DT</div>
+
+                        </div>
+
+                    </div>
+
+               </div>
+
+           </div>
+
+        {% endfor %}
+
+        </div>
+
+    </div>
+
+{% endblock %}
+
+
+

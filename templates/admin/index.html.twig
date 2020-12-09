@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Gérer les matériels' %}
+
+{% block body %}
+
+    <br class="container mt-4">
+        <h1><i class="fa fa-user-circle"></i> Gérer les matériels</h1>
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+          <table class="table table-striped">
+           <thead>
+           <tr>
+               <th>Title</th>
+               <th>Action</th>
+           </tr>
+           </thead>
+        <body>
+        {% for property in proprities %}
+            <tr>
+                <td>{{ property.title }}</td>
+                <td>
+                    <a href="{{ path('admin.property.edit',{id:property.id}) }}" class="btn btn-secondary"><i class='fa fa-edit'></i> Editer</a>
+                </td>
+                <td>
+                    <form method="post" action="{{ path('admin.property.delete', {id:property.id}) }}"  style="display: inline-block"
+                          onsubmit="return confirm('Voulez vous vraiment supprimer cet article ?')">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <BUTTON class="btn btn-danger"><i class='fa fa-cut'></i> Supprimer un matériel</BUTTON>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </body>
+          </table>
+    </br>
+        <div class="text-right">
+            <a href="{{ path('admin.property.new') }}" class="btn btn-primary"><i class='fa fa-cart-plus'></i> Ajouter un matériel</a>
+        </div>
+
+
+
+
+{% endblock %}
+
+
+
