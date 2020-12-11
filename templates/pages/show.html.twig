@@ -32,7 +32,7 @@
                     </div>
                     {{ form_rest(form) }}
                     <div class="form-group">
-                        <button class="btn btn-danger">Contacter nous</button>
+                        <button class="btn btn-danger"><i class="fa fa-envelope-open"></i> Contacter nous</button>
                     </div>
                     {{ form_end(form) }}
 
@@ -45,12 +45,12 @@
            </div>
 
      <div class="container mt-4">
-    <p>
+    <p style="font-family: Arial">
         {{ property.description | nl2br }}
     </p>
          <div class="row">
              <div class="col-md-8">
-                 <h2>Caratéristiques de l'article : </h2>
+                 <h2> Caratéristiques de l'article :<i class="fas fa-comment"></i> </h2>
                  <table class="table table-striped">
                      <tr>
                          <td>Marque</td>
@@ -74,7 +74,7 @@
              </div>
              
              <div class="col-md-4">
-                 <h2>A voir aussi : </h2>
+                 <h2> <i class="fa fa-eye"></i> A voir aussi : </h2>
                   <ul class="list-group">
                  {% for option in property.options %}
                  <li class="list-group-items">{{ option.name }}</li>
