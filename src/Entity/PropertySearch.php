@@ -9,14 +9,13 @@ class PropertySearch
     /**
      * @var int|null
      * @Assert\Positive
-     * @Assert\Range (min="3000",max="15000")
      */
     private $maxPrice;
 
     /**
      * @var String|null
      * @Assert\Type(
-     *     type="alpha",
+     *     type="string",
      *     message="The value {{ value }} is not a valid {{ type }}."
      * )
      */

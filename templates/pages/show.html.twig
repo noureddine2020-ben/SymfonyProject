@@ -4,18 +4,39 @@
 {% block body %}
     <div class="jumbotron">
         <div class="container">
+            {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+            {% endfor %}
         <div class="row">
             <div class="col-md-8">
                 <div class="card md-4">
                     {% if property.filename %}
-                        <img src="/images/properties/{{ property.filename }}" alt="card-img-top" style="width: 70%;height: 80%;">
+                        <img src="/images/properties/{{ property.filename }}" alt="card-img-top" style="width: 70%;height: 60%;">
                     {% endif %}
         </div>
-            <div class="col-md-4"></div>
 
-            <h2>{{ property.name }}</h2>
-            <div class="text-primary" style="font-size:3rem ;font-weight: bolder;">{{ property.formattedPrice() }} DT</div>
-            <a href="#" class="btn btn-danger">Contacter nous</a>
+                <div class="col-md-4"></div>
+            <h3>{{ property.name }}</h3>
+            <div class="text-primary" style="font-size:large ;font-weight:bolder;">{{ property.formattedPrice() }} DT</div>
+                <div id="contactForm" class="mt-4">
+                    {{ form_start(form) }}
+                    <div class="row">
+                        <div class="col">{{ form_row(form.firstName) }}</div>
+                        <div class="col">{{ form_row(form.lastName) }}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">{{ form_row(form.phoneNumber) }}</div>
+                        <div class="col">{{ form_row(form.email) }}</div>
+                    </div>
+                    {{ form_rest(form) }}
+                    <div class="form-group">
+                        <button class="btn btn-danger">Contacter nous</button>
+                    </div>
+                    {{ form_end(form) }}
+
+                </div>
 
         </div>
 
@@ -29,7 +50,7 @@
     </p>
          <div class="row">
              <div class="col-md-8">
-                 <h2>Caratéristiques</h2>
+                 <h2>Caratéristiques de l'article : </h2>
                  <table class="table table-striped">
                      <tr>
                          <td>Marque</td>
@@ -53,7 +74,7 @@
              </div>
              
              <div class="col-md-4">
-                 <h2>Plus de détails</h2>
+                 <h2>A voir aussi : </h2>
                   <ul class="list-group">
                  {% for option in property.options %}
                  <li class="list-group-items">{{ option.name }}</li>
@@ -62,6 +83,8 @@
              </div>
 
          </div>
+
      </div>
+
 {% endblock %}
 

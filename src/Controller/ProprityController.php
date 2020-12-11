@@ -1,19 +1,18 @@
 <?php
 
 namespace App\Controller;
+use App\Entity\Contact;
+use App\Entity\ContactNotification;
 use App\Entity\PropertySearch;
 use App\Entity\Proprity;
+use App\Form\ContactType;
 use App\Form\PropertySearchType;
 use App\Repository\ProprityRepository;
-use Doctrine\ORM\Tools\Pagination\Paginator;
-
 use Knp\Component\Pager\PaginatorInterface;
-use phpDocumentor\Reflection\DocBlock\Tags\Property;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Twig\Environment;
 
 class ProprityController extends AbstractController {
 
@@ -75,12 +74,48 @@ class ProprityController extends AbstractController {
      * @return Response
      */
 
-        public function show($id) : Response
+        public function show(Proprity $property,Request $request, \Swift_Mailer $mailer) : Response
         {
-            $property=$this->repository->find($id);
-           return $this->render('pages/show.html.twig', [
+            $contact = new Contact();
+            $contact->setProperty($property);
+            $form = $this->createForm(ContactType::class, $contact);
+            $form->handleRequest($request);
+
+       if($form->isSubmitted()&&$form->isValid())
+       {
+           $message = (new \Swift_Message('Nouvelle notification'))
+               // On attribue l'expéditeur
+               ->setFrom($contact->getEmail())
+
+               // On attribue le destinataire
+               ->setTo('vumlikudri@nedoz.com')
+
+               // On crée le message avec la vue Twig
+               ->setBody(
+                   $this->renderView(
+                       'emails/notification.html.twig', compact('contact')
+                   ),
+                   'text/html'
+               )
+           ;
+
+           // On envoie le message
+           $mailer->send($message);
+           $this->addFlash('success', 'Monsieur/Madame'.' '.$contact->getLastName().' Votre demande est soumise, nous vous contacterons dans les meilleurs délais');
+
+           return $this->redirectToRoute('property.show', [
+               'id'=> $property->getId(),
+               'current_menu' => 'proprities',
+               'form' =>$form->createView()
+           ]);
+       }
+
+
+       return $this->render('pages/show.html.twig', [
             'property'=>$property,
-           'current_menu' => 'proprities']);
+           'current_menu' => 'proprities',
+               'form' =>$form->createView()
+            ]);
         }
 
 }
