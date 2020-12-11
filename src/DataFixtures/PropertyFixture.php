@@ -11,7 +11,7 @@ class PropertyFixture extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        for($i=0;$i<100;$i++)
+        for($i=0;$i<15;$i++)
         {   $faker=Factory::create('th_TH');
             $property=new Proprity();
             $property

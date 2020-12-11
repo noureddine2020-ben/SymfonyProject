@@ -88,7 +88,7 @@ class ProprityController extends AbstractController {
                ->setFrom($contact->getEmail())
 
                // On attribue le destinataire
-               ->setTo('vumlikudri@nedoz.com')
+               ->setTo('contact@agence.fr')
 
                // On crée le message avec la vue Twig
                ->setBody(

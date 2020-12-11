@@ -11,24 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74c1557b-92a8-48c6-9ebd-68aa6a2c370a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Contact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/ContactNotification.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/emails/notification.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/properties/5fd3de00f3731439630999.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/properties/5fd3e05be72bc067338271.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/properties/5fd3e34a6892b522250588.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/agence_agricol.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/agence_agricol.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProprityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProprityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/PropertySearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PropertySearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/PropertyFixture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/PropertyFixture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/emails/notification.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/emails/notification.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/pagin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/pagin.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,6 +224,8 @@
       <workItem from="1607642302176" duration="5126000" />
       <workItem from="1607696575267" duration="6504000" />
       <workItem from="1607708832327" duration="49000" />
+      <workItem from="1607714540156" duration="903000" />
+      <workItem from="1607715679895" duration="6315000" />
     </task>
     <servers />
   </component>
@@ -293,6 +288,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607379393611" />
+    <state x="189" y="90" width="965" height="514" key="IDE.errors.dialog" timestamp="1607715140363">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="189" y="90" width="965" height="514" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1607715140363" />
     <state x="736" y="91" key="NewPhpClassDialog" timestamp="1607640496934">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

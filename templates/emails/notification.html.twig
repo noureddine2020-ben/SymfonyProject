@@ -7,6 +7,12 @@
 </head>
 <body>
 <h1>{{ contact.property.title }}</h1>
+<h2>{{ contact.property.name }}</h2>
 <p>Cher administrateur, un nouveau client vous envoie une notifcation sur votre produit</p>
+<p>Message : {{ contact.message }}</p>
+<p>Nom : {{ contact.firstName }}</p>
+<p>Prénom : {{ contact.lastName }}</p>
+<p>Email : {{ contact.email }}</p>
+<p>Numéro de contact : {{ contact.phoneNumber }}</p>
 </body>
 </html>

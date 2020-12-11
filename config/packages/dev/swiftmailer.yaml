@@ -1,4 +1,4 @@
 # See https://symfony.com/doc/current/email/dev_environment.html
 # config/packages/dev/swiftmailer.yaml
 swiftmailer:
-  delivery_addresses: ['vumlikudri@nedoz.com']
+  delivery_addresses: ['contact@agence.com']
