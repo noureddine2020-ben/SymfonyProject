@@ -1,4 +1,3 @@
-
 {% extends 'base.html.twig' %}
 {% block title property.title %}
 {% block body %}
@@ -50,7 +49,7 @@
     </p>
          <div class="row">
              <div class="col-md-8">
-                 <h2> Caratéristiques de l'article :<i class="fas fa-comment"></i> </h2>
+                 <h2> <b>Caratéristiques de l'article </b>:<i class="fas fa-comment"></i> </h2>
                  <table class="table table-striped">
                      <tr>
                          <td>Marque</td>
@@ -74,7 +73,7 @@
              </div>
              
              <div class="col-md-4">
-                 <h2> <i class="fa fa-eye"></i> A voir aussi : </h2>
+                 <h2> <i class="fa fa-eye"></i><b> Voir plus d'options </b>: </h2>
                   <ul class="list-group">
                  {% for option in property.options %}
                  <li class="list-group-items">{{ option.name }}</li>
